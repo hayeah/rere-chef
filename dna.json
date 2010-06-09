@@ -5,7 +5,7 @@
     "reremind"
 ],
  "reremind":{
-     "db" {
+     "db": {
          "name": ["reremind"]
      }}
 }
