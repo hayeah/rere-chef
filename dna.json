@@ -1,1 +1,4 @@
-{"recipes":["ruby_enterprise"]}
+{"recipes":[
+    "build_essential",
+    "ruby_enterprise"
+]}
