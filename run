@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo `which chef-solo` -c solo.rb -j dna.json
