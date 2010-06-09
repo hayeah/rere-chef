@@ -1,5 +1,11 @@
 {"recipes":[
     "build-essential",
     "ruby_enterprise",
-    "mysql::server"
-]}
+    "mysql::server",
+    "reremind"
+],
+ "reremind":{
+     "db" {
+         "name": ["reremind"]
+     }}
+}
