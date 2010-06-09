@@ -1,5 +1,5 @@
 {"recipes":[
     "build-essential",
     "ruby_enterprise",
-    "mysql"
+    "mysql::server"
 ]}
