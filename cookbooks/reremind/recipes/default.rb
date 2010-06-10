@@ -36,13 +36,12 @@ directory "/app/rere" do
   not_if "test -d /tmp/something"
 end
 
-
-# deploy "/app/reremind" do
-#   repository "git://github.com/hayeah/rere.git"
-#   user "rere"
-#   group "rere"
-#   shallow_clone true
-#   environment "RAILS_ENV" => "production"
-#   migrate true
-#   migration_command "rake db:migrate"
-# end
+deploy "/app/reremind" do
+  repository "git://github.com/hayeah/rere.git"
+  user "rere"
+  group "rere"
+  shallow_clone true
+  environment "RAILS_ENV" => "production"
+  migrate true
+  migration_command "rake db:migrate"
+end
