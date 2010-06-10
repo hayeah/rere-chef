@@ -1,6 +1,5 @@
 {"recipes":[
     "build-essential",
-    "ruby_enterprise",
     "mysql::server"
 ],
  "reremind":{
