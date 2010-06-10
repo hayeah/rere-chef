@@ -51,4 +51,9 @@ deploy "/app/rere" do
   before_migrate
   migrate true
   migration_command "rake db:migrate"
+
+  purge_before_symlink
+  create_dirs_before_symlink
+  symlinks
+  symlink_before_migrate
 end
