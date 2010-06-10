@@ -4,7 +4,7 @@
 ],
  "rere":{
      "db": {
-         "name": ["rere"]
+         "name": ["rere"],
          "user": "rere"
      }},
  "mysql":{
