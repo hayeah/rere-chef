@@ -37,7 +37,8 @@ directory "/app/rere" do
 end
 
 package "libxml2-dev" # for nokogiri
-package "libxslt-dev" # for nokogiri
+package "libxslt1-dev" # for nokogiri
+package "libpq-dev"
 gem_package "rake"
 gem_package "bundler"
 
