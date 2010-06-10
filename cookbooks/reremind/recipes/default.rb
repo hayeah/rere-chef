@@ -45,6 +45,7 @@ deploy "/app/rere" do
   group "rere"
   shallow_clone true
   environment "RAILS_ENV" => "production"
+  before_migrate
   migrate true
   migration_command "rake db:migrate"
 end
