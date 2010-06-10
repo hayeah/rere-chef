@@ -50,5 +50,5 @@ deploy "/app/rere" do
   environment "RAILS_ENV" => "production"
   before_migrate
   migrate true
-  migration_command "RAILS_ENV=production rake db:migrate"
+  migration_command "rake db:migrate"
 end
