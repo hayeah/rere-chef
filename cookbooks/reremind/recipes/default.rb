@@ -10,7 +10,19 @@ execute "create database #{node[:rere][:db][:name]}" do
   end
 end
 
+user do
+  username "rere"
+end
+
+group do
+  group_name "rere"
+  members ["rere"]
+end
+
 # create database user for application
+# execute "create mysql user" do
+#   "grant all on rere.* to rere identified by 'rere'"
+# end
 
 # deploy "/app/reremind" do
 #   repository "git://github.com/hayeah/rere.git"
