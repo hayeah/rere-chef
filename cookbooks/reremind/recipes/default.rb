@@ -36,6 +36,9 @@ directory "/app/rere" do
   not_if "test -d /tmp/something"
 end
 
+gem_package "rake"
+gem_package "bundler"
+
 deploy "/app/rere" do
   repository "git://github.com/hayeah/rere.git"
   user "rere"
