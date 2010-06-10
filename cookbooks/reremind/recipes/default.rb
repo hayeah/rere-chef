@@ -36,6 +36,7 @@ directory "/app/rere" do
   not_if "test -d /tmp/something"
 end
 
+package "libxml2-dev" # for nokogiri
 gem_package "rake"
 gem_package "bundler"
 
