@@ -19,6 +19,14 @@ group do
   members ["rere"]
 end
 
+execute "mysql create user" do
+  command <<-CMD
+/usr/bin/mysql -u root -p#{node[:mysql][:server_root_password]} <<HERE
+grant all on rere.* to rere identified by 'rere';
+HERE
+CMD
+end
+
 directory "/app/rere" do
   owner "rere"
   group "rere"
@@ -28,10 +36,6 @@ directory "/app/rere" do
   not_if "test -d /tmp/something"
 end
 
-# create database user for application
-# execute "create mysql user" do
-#   "grant all on rere.* to rere identified by 'rere'"
-# end
 
 # deploy "/app/reremind" do
 #   repository "git://github.com/hayeah/rere.git"
