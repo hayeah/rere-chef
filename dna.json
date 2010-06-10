@@ -1,4 +1,5 @@
-{"recipes":[
+{""
+"recipes":[
     "build-essential",
     "ruby_enterprise",
     "mysql::server",
@@ -7,5 +8,10 @@
  "reremind":{
      "db": {
          "name": ["reremind"]
-     }}
+     }},
+ "mysql":{
+     "server_debian_password": "3QuHugS6",
+     "server_root_password": "3QuHugS6",
+     "server_repl_password": "3QuHugS6"
+ }
 }

@@ -8,3 +8,13 @@ execute "create #{node[:reremind][:db][:database]} database" do
     m.list_dbs.include?(@node[:reremind][:db][:name])
   end
 end
+
+deploy "/app/reremind" do
+  repository "git://github.com/hayeah/rere.git"
+  user "rere"
+  group "rere"
+  shallow_clone true
+  environment "RAILS_ENV" => "production"
+  migrate true
+  migration_command "rake db:migrate"
+end
