@@ -1,7 +1,7 @@
 {"recipes":[
     "build-essential",
-    "mysql::server"
-],
+    "mysql::server",
+    "reremind"],
  "rere":{
      "db": {
          "name": "rere",
