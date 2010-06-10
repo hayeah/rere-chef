@@ -22,7 +22,7 @@ end
 execute "mysql create user" do
   command <<-CMD
 /usr/bin/mysql -u root -p#{node[:mysql][:server_root_password]} <<HERE
-grant all on rere.* to rere identified by 'rere';
+grant all on rere.* to rere identified by '#{node[:rere][:db][:password]}';
 HERE
 CMD
 end
