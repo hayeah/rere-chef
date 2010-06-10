@@ -36,7 +36,7 @@ directory "/app/rere" do
   not_if "test -d /tmp/something"
 end
 
-deploy "/app/reremind" do
+deploy "/app/rere" do
   repository "git://github.com/hayeah/rere.git"
   user "rere"
   group "rere"
