@@ -2,9 +2,10 @@
     "build-essential",
     "mysql::server"
 ],
- "reremind":{
+ "rere":{
      "db": {
-         "name": ["reremind"]
+         "name": ["rere"]
+         "user": "rere"
      }},
  "mysql":{
      "server_debian_password": "3QuHugS6",
