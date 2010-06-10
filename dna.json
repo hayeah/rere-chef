@@ -4,8 +4,9 @@
 ],
  "rere":{
      "db": {
-         "name": ["rere"],
-         "user": "rere"
+         "name": "rere",
+         "username": "rere",
+         "password": "3QuHugS6",
      }},
  "mysql":{
      "server_debian_password": "3QuHugS6",
