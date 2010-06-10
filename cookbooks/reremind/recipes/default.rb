@@ -19,6 +19,15 @@ group do
   members ["rere"]
 end
 
+directory "/app/rere" do
+  owner "rere"
+  group "rere"
+  mode "0755"
+  action :create
+  recursive true
+  not_if "test -d /tmp/something"
+end
+
 # create database user for application
 # execute "create mysql user" do
 #   "grant all on rere.* to rere identified by 'rere'"
