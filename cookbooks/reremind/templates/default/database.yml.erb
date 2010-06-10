@@ -1,0 +1,8 @@
+production:
+  adapter: mysql
+  database: <%= @node[:rere][:db][:name] %>
+  host: localhost
+  port: 3306
+  username: <%= @node[:rere][:db][:username] %>
+  password: <%= @node[:rere][:db][:password] %>
+

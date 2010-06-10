@@ -42,6 +42,25 @@ package "libpq-dev"
 gem_package "rake"
 gem_package "bundler"
 
+%w(system pids log config).each do |dir|
+  directory "/app/rere/shared/#{dir}" do
+    owner "rere"
+    group "rere"
+    mode "0755"
+    action :create
+    recursive true
+    not_if "test -d /tmp/something"
+  end
+end
+
+template "/app/rere/shared/config/database.yml" do
+  source "database.yml.erb"
+  owner "rere"
+  group "rere"
+  mode "0644"
+end
+
+
 deploy "/app/rere" do
   repository "git://github.com/hayeah/rere.git"
   user "rere"
