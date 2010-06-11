@@ -42,6 +42,7 @@ package "libpq-dev"
 gem_package "rake"
 gem_package "bundler"
 gem_package "unicorn"
+gem_package "god"
 
 %w(system pids log config).each do |dir|
   directory "/app/rere/shared/#{dir}" do
