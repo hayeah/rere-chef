@@ -43,6 +43,12 @@ gem_package "rake"
 gem_package "bundler"
 gem_package "unicorn"
 gem_package "god"
+gem_package "rails"
+
+execute "start god" do
+  command "god"
+  not_if "god check"
+end
 
 %w(system pids log config).each do |dir|
   directory "/app/rere/shared/#{dir}" do
