@@ -47,7 +47,6 @@ gem_package "rails"
 
 execute "start god" do
   command "god"
-  not_if "god check"
 end
 
 %w(system pids log config).each do |dir|
