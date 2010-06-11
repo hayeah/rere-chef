@@ -82,6 +82,9 @@ deploy "/app/rere" do
   create_dirs_before_symlink
   symlinks
   symlink_before_migrate
+end
 
-  restart_command "god load config/rere.god"
+execute "start rere" do
+  command "god load config/rere.god"
+  cwd "/app/rere/current"
 end
