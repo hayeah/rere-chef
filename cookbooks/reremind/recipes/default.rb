@@ -67,7 +67,6 @@ template "/app/rere/shared/config/database.yml" do
   mode "0644"
 end
 
-
 deploy "/app/rere" do
   repository "git://github.com/hayeah/rere.git"
   user "rere"
@@ -88,3 +87,9 @@ execute "start rere" do
   command "god load config/rere.god"
   cwd "/app/rere/current"
 end
+
+link "/app/rere/current/conf/nginx.conf" do
+  to "#{node[:nginx][:dir]}/site-available/rere"
+end
+
+nginx_site :name => "rere"
