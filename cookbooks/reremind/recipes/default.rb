@@ -88,7 +88,7 @@ execute "start rere" do
   cwd "/app/rere/current"
 end
 
-link "#{node[:nginx][:dir]}/site-available/rere" do
+link "#{node[:nginx][:dir]}/sites-available/rere" do
   to "/app/rere/current/config/nginx.conf"
 end
 
