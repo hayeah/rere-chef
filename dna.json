@@ -1,6 +1,7 @@
 {"recipes":[
     "build-essential",
     "mysql::server",
+    "nginx",
     "reremind"],
  "rere":{
      "db": {
