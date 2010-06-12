@@ -92,4 +92,4 @@ link "#{node[:nginx][:dir]}/site-available/rere" do
   to "/app/rere/current/config/nginx.conf"
 end
 
-nginx_site :name => "rere"
+nginx_site "rere"
