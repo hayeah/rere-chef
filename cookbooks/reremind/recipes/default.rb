@@ -39,6 +39,7 @@ end
 package "libxml2-dev" # for nokogiri
 package "libxslt1-dev" # for nokogiri
 package "libpq-dev"
+package "imagemagick"
 gem_package "rake"
 gem_package "bundler"
 gem_package "unicorn"
